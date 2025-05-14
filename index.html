@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>しりとりゲーム</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>しりとりゲーム</h1>
+        
+        <div class="game-rules">
+            <h2>ルール</h2>
+            <ul>
+                <li>ひらがなのみ使用可能です</li>
+                <li>「ん」で終わる言葉を入力すると負けです</li>
+                <li>アプリの返答が「ん」で終わると勝ちです</li>
+                <li>濁点は正しく処理されます（例：「か」と「が」は別の文字）</li>
+                <li>小さい「ゃ」「ゅ」「ょ」は「や」「ゆ」「よ」として扱われます</li>
+            </ul>
+        </div>
+
+        <div class="game-area">
+            <div class="word-history">
+                <h3>言葉の履歴</h3>
+                <ul id="word-list"></ul>
+            </div>
+
+            <div id="game-status" class="game-status">
+                <p>ゲームを始めましょう！最初の言葉を入力してください。</p>
+                <div id="win-illust" class="result-illust win-illust">
+                    🎉🎉🎉 おめでとう！ 🎉🎉🎉
+                </div>
+                <div id="lose-illust" class="result-illust lose-illust">
+                    💀💀💀 残念！ 💀💀💀
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="word-input" placeholder="ひらがなで入力してください" autocomplete="off">
+                <button id="submit-btn">送信</button>
+                <button id="reset-btn">リセット</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/shiritori.js"></script>
+</body>
+</html>
